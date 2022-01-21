@@ -1,11 +1,7 @@
-import { Location } from 'history';
-
-type LocationProps = Location<{
-	referer?: { pathname?: string };
-}>;
+type LocationProps = any;
 
 interface Props {
-	location?: LocationProps | Location<unknown>;
+  location?: any;
 }
 
 export type { Props, LocationProps };

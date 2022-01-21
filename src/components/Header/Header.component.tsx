@@ -1,6 +1,5 @@
 import { FC, useState } from "react";
-import { useHistory } from "react-router-dom";
-import { History } from "history";
+import { useNavigate } from "react-router-dom";
 
 import { useState as useStoreState, useDispatch } from "../../store/State";
 import { LOG_OUT } from "../../store/auth";
@@ -17,11 +16,11 @@ const Header: FC = () => {
   } = useStoreState();
   const [toggle, setToggle] = useState<boolean>(false);
   const dispatch = useDispatch();
-  const history = useHistory<History>();
+  const navigate = useNavigate();
 
   const signOut = () => dispatch(LOG_OUT());
 
-  const redirect = (path: string) => history.push(path);
+  const redirect = (path: string) => navigate(path);
 
   const toggleDrawer = () => setToggle(!toggle);
 
@@ -41,7 +40,7 @@ const Header: FC = () => {
       </nav>
       <Sidebar open={toggle} onClose={() => toggleDrawer()}>
         {MODULES.filter(
-          ({ app, isRootPath }) => APPS.indexOf(app) !== -1 && isRootPath
+          ({ app, isRootPath }) => APPS?.indexOf(app) !== -1 && isRootPath
         ).map(({ app, path }) => (
           <Button
             key={app}

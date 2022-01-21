@@ -1,19 +1,84 @@
 {
-  "posts": [
+  "login": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "id": "1",
+      "name": "Mariana Oropeza",
+      "nickname": "Sualy",
+      "username": "te",
+      "password": "amo!"
     }
   ],
-  "comments": [
+  "staff": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "id": "1",
+      "name": "Mariana Oropeza",
+      "nickname": "Sualy",
+      "position": "Analista"
+    },
+    {
+      "id": "2",
+      "name": "No se",
+      "nickname": "N",
+      "position": "CEO"
+    },
+    {
+      "id": "3",
+      "name": "No se",
+      "nickname": "N",
+      "position": "Couch"
+    },
+    {
+      "id": "4",
+      "name": "No se",
+      "nickname": "N",
+      "position": "Manager"
     }
   ],
-  "profile": {
-    "name": "typicode"
-  }
+  "player": [
+    {
+      "id": "1",
+      "name": "",
+      "nickname": "",
+      "position": "",
+      "titular": "",
+      "cuentasLAN": "",
+      "cuentasNA": ""
+    },
+    {
+      "id": "2",
+      "name": "",
+      "nickname": "",
+      "position": "",
+      "titular": "",
+      "cuentasLAN": "",
+      "cuentasNA": ""
+    },
+    {
+      "id": "3",
+      "name": "",
+      "nickname": "",
+      "position": "",
+      "titular": "",
+      "cuentasLAN": "",
+      "cuentasNA": ""
+    },
+    {
+      "id": "4",
+      "name": "",
+      "nickname": "",
+      "position": "",
+      "titular": "",
+      "cuentasLAN": "",
+      "cuentasNA": ""
+    },
+    {
+      "id": "5",
+      "name": "",
+      "nickname": "",
+      "position": "",
+      "titular": "",
+      "cuentasLAN": "",
+      "cuentasNA": ""
+    }
+  ]
 }

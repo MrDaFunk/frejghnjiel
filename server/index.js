@@ -1,9 +1,12 @@
-var http = require("http");
+const express = require("express");
+const path = require("path");
 var jsonServer = require("json-server");
 
 var server = jsonServer.create();
-var router = jsonServer.router("db.json");
+var db = jsonServer.router("db.json");
 var middlewares = jsonServer.defaults();
+
+const app = express();
 
 // Set default middlewares (logger, static, cors and no-cache)
 server.use(middlewares);
@@ -25,15 +28,18 @@ server.use(middlewares);
 // });
 
 // Use default router
-server.use(router);
-server.listen(8000, () => {
+server.use("/", db);
+server.listen(8100, () => {
   console.log("JSON Server is running");
 });
 
-//create a server object:
-http
-  .createServer(function (req, res) {
-    res.write("Hello World!"); //write a response to the client
-    res.end(); //end the response
-  })
-  .listen(8100); //the server object listens on port 8080
+// app.use(express.static(path.join(__dirname, "../my-app/build")));
+
+app.use("/", express.static(path.join(__dirname, "../build/")));
+
+// viewed at http://localhost:8080
+app.use("*", function (req, res) {
+  res.sendFile(path.join(__dirname, "../build/index.html"));
+});
+
+app.listen(8000);
