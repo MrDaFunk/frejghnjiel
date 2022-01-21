@@ -1,0 +1,20 @@
+{
+  "user": [
+    {
+      "id": "1",
+      "name": "Mariana Oropeza",
+      "nickname": "Sualy",
+      "username": "te",
+      "password": "amo!"
+    }
+  ],
+  "staff": [
+    {
+      "id": "1",
+      "name": "Mariana Oropeza",
+      "nickname": "Sualy",
+      "position": "Analista"
+    }
+  ],
+  "player": []
+}
