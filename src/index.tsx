@@ -1,8 +1,6 @@
 import { render } from "react-dom";
 
-// import App from "./components/App";
-
-const App = () => <>vhgsjfhgvkftueri</>;
+import App from "./components/App";
 
 const rootElement = document.getElementById("root");
 render(<App />, rootElement);

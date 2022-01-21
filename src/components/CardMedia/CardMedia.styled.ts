@@ -1,10 +1,11 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
-import MaterialCardMedia from '@mui/material/CardMedia';
+import MaterialCardMedia from "@mui/material/CardMedia";
 
 const CardMedia = styled(MaterialCardMedia)`
-	height: 0;
-	padding-top: 50%;
+  height: 0;
+  padding-top: 50%;
+  background-size: contain !important;
 `;
 
 export default CardMedia;
