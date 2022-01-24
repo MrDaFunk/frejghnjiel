@@ -1,22 +1,17 @@
 enum Pagenames {
-	HOMEPAGE = 'Homepage',
+  HOMEPAGE = "Pagina Principal"
 }
 
 enum AuthPagenames {
-	LOGIN = 'Log in',
+  LOGIN = "Inicio de Sesion"
 }
 
 enum DashboardPagenames {
-	HOMEPAGE = 'Dashboard',
+  HOMEPAGE = "Dashboard"
 }
 
 enum TeamMakerPagenames {
-	HOMEPAGE = 'Team Maker',
+  HOMEPAGE = "Team Maker"
 }
 
-export {
-	Pagenames,
-	AuthPagenames,
-	TeamMakerPagenames,
-	DashboardPagenames,
-};
+export { Pagenames, AuthPagenames, TeamMakerPagenames, DashboardPagenames };

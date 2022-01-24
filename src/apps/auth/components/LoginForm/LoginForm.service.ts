@@ -1,19 +1,20 @@
-import Method from '../../../../enums/http';
-import { Call } from '../../../../interfaces/http';
-import Session from '../../../../interfaces/session';
-import call from '../../../../services/http';
+import { stringify } from "query-string";
 
-import AUTH_LOGIN_PATH from './LoginForm.constants';
-import Credentials from './LoginForm.interface';
+import Method from "../../../../enums/http";
+import { Call } from "../../../../interfaces/http";
+// import Session from "../../../../interfaces/session";
+import call from "../../../../services/http";
 
-const login = async (credentials: Credentials): Promise<Call<Session>> =>
-	call({
-		url: AUTH_LOGIN_PATH,
-		options: {
-			method: Method.POST,
-			body: JSON.stringify(credentials),
-		},
-		avoidErrorOn404: true,
-	});
+import AUTH_LOGIN_PATH from "./LoginForm.constants";
+import Credentials from "./LoginForm.interface";
+
+const login = async (credentials: Credentials): Promise<Call<any>> =>
+  call({
+    url: `${AUTH_LOGIN_PATH}?${stringify(credentials)}`,
+    options: {
+      method: Method.GET
+    },
+    avoidErrorOn404: true
+  });
 
 export default login;

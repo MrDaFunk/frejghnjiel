@@ -2,8 +2,8 @@ import { FC, Suspense, lazy } from "react";
 import {
   BrowserRouter,
   Routes as Switch,
-  Route
-  // Navigate
+  Route,
+  Navigate
 } from "react-router-dom";
 
 import {
@@ -83,6 +83,10 @@ const Routes: FC = () => (
               checkSession={true}
             />
           }
+        />
+        <Route
+          path="*"
+          element={<Navigate to={Path.HOMEPAGE} replace={true} />}
         />
       </Switch>
     </Suspense>

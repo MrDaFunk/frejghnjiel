@@ -1,20 +1,12 @@
-import { FC } from 'react';
+import { FC } from "react";
 
-import Crud from '../../../../components/Crud';
-import { PRODUCT_PATH } from '../../../../constants/api';
+import Crud from "../../../../components/Crud";
+import { TEAM_PATH } from "../../../../constants/api";
 
-import HEADERS from '../../constants/table';
-import FormFilters from '../../components/FormFilters';
-import SearchFilters from '../../components/SearchFilters';
+import HEADERS from "../../constants/table";
 
 const TeamMakerHome: FC = () => (
-	<Crud
-		idFilter='product'
-		url={PRODUCT_PATH}
-		headers={HEADERS}
-		filters={SearchFilters}
-		form={FormFilters}
-	/>
+  <Crud url={`${TEAM_PATH}?type=player`} headers={HEADERS} />
 );
 
 export default TeamMakerHome;

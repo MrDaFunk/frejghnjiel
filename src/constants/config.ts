@@ -1,11 +1,11 @@
-const APP_NAME = process.env.REACT_APP_NAME;
+const APP_NAME = "Atomic Esports";
 
-const APPS = process.env.REACT_APP_APPS;
+const APPS = "auth dashboard team-maker";
 
-const API_PATH = process.env.REACT_APP_API_PATH;
+const API_PATH = "https://ovdzj-8100.sse.codesandbox.io/";
 
-const AUTH_TOKEN = process.env.REACT_APP_TOKEN_NAME;
+const AUTH_TOKEN = "AtOkEn";
 
-const DEFAULT_LANG = process.env.REACT_APP_DEFAULT_LANG;
+const DEFAULT_LANG = "es_MX";
 
 export { APP_NAME, APPS, API_PATH, AUTH_TOKEN, DEFAULT_LANG };

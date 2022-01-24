@@ -3,7 +3,7 @@ const path = require("path");
 var jsonServer = require("json-server");
 
 var server = jsonServer.create();
-var db = jsonServer.router("db.json");
+var db = jsonServer.router(path.join(__dirname, "./db.json"));
 var middlewares = jsonServer.defaults();
 
 const app = express();
@@ -28,8 +28,7 @@ server.use(middlewares);
 // });
 
 // Use default router
-server.use("/", db);
-server.listen(8100, () => {
+server.use("/", db).listen(8100, () => {
   console.log("JSON Server is running");
 });
 

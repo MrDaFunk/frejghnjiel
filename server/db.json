@@ -1,84 +1,99 @@
 {
   "login": [
     {
-      "id": "1",
-      "name": "Mariana Oropeza",
-      "nickname": "Sualy",
+      "id": 1,
       "username": "te",
-      "password": "amo!"
+      "password": "amo!",
+      "active": true
     }
   ],
-  "staff": [
+  "team": [
     {
-      "id": "1",
+      "id": 1,
       "name": "Mariana Oropeza",
       "nickname": "Sualy",
-      "position": "Analista"
+      "summonername": "VLK Sualy",
+      "rol": "dataAnalyst",
+      "type": "Otro"
     },
     {
-      "id": "2",
-      "name": "No se",
-      "nickname": "N",
-      "position": "CEO"
+      "id": 2,
+      "name": "Ronald Fernando Velez Patiño",
+      "nickname": "Retzu",
+      "summonername": "Retzu",
+      "rol": "analyst",
+      "type": "Otro"
     },
     {
-      "id": "3",
-      "name": "No se",
-      "nickname": "N",
-      "position": "Couch"
+      "id": 3,
+      "name": "Daniel Asael Orta Gutierrez",
+      "nickname": "Kenobie",
+      "summonername": "Kenobie",
+      "rol": "couch",
+      "type": "Entrenador"
     },
     {
-      "id": "4",
-      "name": "No se",
-      "nickname": "N",
-      "position": "Manager"
+      "id": 4,
+      "name": "Jose Andres Mata Bastardo",
+      "nickname": "Photis",
+      "summonername": "Photis",
+      "rol": "assistantCouch",
+      "type": "Otro"
+    },
+    {
+      "id": 5,
+      "name": "Khenmelt Omar Izaguirre Castillo",
+      "nickname": "MC2 Wrecking",
+      "summonername": "Wrecking",
+      "rol": "top",
+      "type": "player",
+      "accountsna": ""
+    },
+    {
+      "id": 6,
+      "name": "Jesus Vicente Salto Malfavon",
+      "nickname": "MC2 Chente",
+      "summonername": "TdT de Adobada",
+      "rol": "jungler",
+      "type": "player",
+      "accountsna": ""
+    },
+    {
+      "id": 7,
+      "name": "Ivan Garcia Rivera",
+      "nickname": "MC2 ||Sky||",
+      "summonername": "El chamas",
+      "rol": "mid",
+      "type": "player",
+      "accountsna": "Shearrealtide"
+    },
+    {
+      "id": 8,
+      "name": "Israel Getsemani Ramos Guereca",
+      "nickname": "MC2 Güereca",
+      "summonername": "Mark Manson",
+      "rol": "adc",
+      "type": "player",
+      "accountsna": "Diancraogre"
+    },
+    {
+      "id": 9,
+      "name": "Alvaro Alexis Perez Rivera",
+      "nickname": "MC2 MacCuin",
+      "summonername": "MacCuin",
+      "rol": "support",
+      "type": "player",
+      "accountsna": ""
+    },
+    {
+      "id": 10,
+      "name": "Ruben Rodriguez Carrizal",
+      "nickname": "MC2 Nym",
+      "summonername": "Nyms",
+      "rol": "alternate",
+      "type": "player",
+      "accountsna": "Loutar Jr"
     }
   ],
-  "player": [
-    {
-      "id": "1",
-      "name": "",
-      "nickname": "",
-      "position": "",
-      "titular": "",
-      "cuentasLAN": "",
-      "cuentasNA": ""
-    },
-    {
-      "id": "2",
-      "name": "",
-      "nickname": "",
-      "position": "",
-      "titular": "",
-      "cuentasLAN": "",
-      "cuentasNA": ""
-    },
-    {
-      "id": "3",
-      "name": "",
-      "nickname": "",
-      "position": "",
-      "titular": "",
-      "cuentasLAN": "",
-      "cuentasNA": ""
-    },
-    {
-      "id": "4",
-      "name": "",
-      "nickname": "",
-      "position": "",
-      "titular": "",
-      "cuentasLAN": "",
-      "cuentasNA": ""
-    },
-    {
-      "id": "5",
-      "name": "",
-      "nickname": "",
-      "position": "",
-      "titular": "",
-      "cuentasLAN": "",
-      "cuentasNA": ""
-    }
-  ]
+  "matches": []
 }

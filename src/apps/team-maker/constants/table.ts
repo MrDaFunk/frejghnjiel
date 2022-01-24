@@ -1,34 +1,28 @@
 const HEADERS = [
-	{
-		name: 'name',
-		header: 'Name',
-		width: 300,
-	},
-	{
-		name: 'keyword',
-		header: 'Keyword',
-	},
-	{
-		name: 'cost',
-		header: 'Cost',
-	},
-	{
-		name: 'price',
-		header: 'Price',
-	},
-	{
-		name: 'archived',
-		header: 'Archived',
-	},
-	{
-		name: 'onMenu',
-		header: 'On Menu',
-	},
-	{
-		name: 'family',
-		header: 'Family',
-		width: 300,
-	},
+  {
+    name: "name",
+    header: "Nombre",
+    width: 250
+  },
+  {
+    name: "rol",
+    header: "Rol"
+  },
+  {
+    name: "nickname",
+    header: "Nick",
+    width: 150
+  },
+  {
+    name: "summonername",
+    header: "Summonername",
+    width: 150
+  },
+  {
+    name: "accountsna",
+    header: "Cuentas NA",
+    width: 150
+  }
 ];
 
 export default HEADERS;

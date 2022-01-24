@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Form from "../../../../components/Form";
 import Button from "../../../../components/Button";
@@ -14,6 +15,8 @@ import { Change as ChangeEvent } from "../../../../interfaces/event";
 import { useDispatch } from "../../../../store/State";
 import { LOG_IN } from "../../../../store/auth";
 
+import { TeamMakerAppPath } from "../../../../enums/path";
+
 import login from "./LoginForm.service";
 import Credentials from "./LoginForm.interface";
 import CredentialsFieldType from "./LoginForm.enums";
@@ -28,6 +31,7 @@ const LoginForm: FC = () => {
   const [isError, setIsError] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string>("");
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = async () => {
     if (username === "" || password === "") {
@@ -38,15 +42,15 @@ const LoginForm: FC = () => {
       username,
       password
     });
-    const {
-      success,
-      data: { token } = { token: "" },
-      message = ""
-    } = await response.json();
-    if (success) {
-      dispatch(LOG_IN(token));
+    console.log(response);
+    const { ok, statusText = "" } = await response;
+    const resp = await response.json();
+
+    if (ok && resp && resp.length > 0) {
+      dispatch(LOG_IN(`session!${username}`));
+      navigate(TeamMakerAppPath.HOMEPAGE, { replace: true });
     } else {
-      setErrorMessage(message);
+      setErrorMessage(statusText);
       setIsError(true);
     }
   };
@@ -60,26 +64,26 @@ const LoginForm: FC = () => {
   return (
     <Card shadow middle fullHeight>
       <Form onSubmit={handleSubmit}>
-        <CardHeader subheader={"Log in"} />
+        <CardHeader subheader={"Iniciar sesion"} />
         <CardMedia image={"logo.png"} title={"Logo"} />
         <CardContent>
           <Input
             value={username}
             autoFocus
-            label={"User"}
+            label={"Usuario"}
             onChange={changeUserName}
             required
           />
           <Input
             value={password}
             type={InputType.PASSWORD}
-            label={"Password"}
+            label={"Contraseña"}
             onChange={changePassword}
             required
           />
         </CardContent>
         <CardFooter>
-          <Button type={ButtonType.SUBMIT}>Access</Button>
+          <Button type={ButtonType.SUBMIT}>Accesar</Button>
         </CardFooter>
       </Form>
       {isError && <p>{errorMessage}</p>}

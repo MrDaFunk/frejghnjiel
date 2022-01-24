@@ -1,5 +1,5 @@
-import { AUTH_PATH } from '../../../../constants/api';
+import { AUTH_PATH } from "../../../../constants/api";
 
-const AUTH_LOGIN_PATH = `${AUTH_PATH}login`;
+const AUTH_LOGIN_PATH = `${AUTH_PATH}`;
 
 export default AUTH_LOGIN_PATH;

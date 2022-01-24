@@ -34,7 +34,7 @@ const Input: FC<Props> = ({
       target: { value: eventValue }
     } = event;
     if (required && eventValue === "") {
-      setErrorMessage("Empty field");
+      setErrorMessage("Campo vacio");
     } else if (validation && !validateEmail(value)) {
       setErrorMessage("Incorrect email input");
     } else if (errorMessage !== "") {

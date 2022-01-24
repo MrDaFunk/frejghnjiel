@@ -1,6 +1,0 @@
-{
-  "/api/*": "/$1",
-  "/user": "/user",
-  "/staff\\?id=:id": "/staff/:id",
-  "/player": "/player"
-}
