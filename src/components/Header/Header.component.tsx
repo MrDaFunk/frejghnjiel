@@ -50,7 +50,7 @@ const Header: FC = () => {
           </Button>
         ))}
         <Button onClick={() => menuOptionHandler(() => signOut())}>
-          Log out
+          Cerrar Sesion
         </Button>
       </Sidebar>
     </>

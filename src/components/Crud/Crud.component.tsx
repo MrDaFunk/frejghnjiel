@@ -22,12 +22,13 @@ const Crud: FC<Props> = ({
   url,
   headers,
   filters: SearchFilters,
-  form: FormFilters
+  form: FormFilters,
+  action
 }) => {
   const token = get<string>(Storage.TOKEN, "") || "";
   const resp = useCrud<Rows>(`${url}`, token);
   const data: any = resp[0];
-  console.log(data);
+  // console.log(data);
   return (
     <>
       {SearchFilters && idFilter && (
@@ -47,7 +48,14 @@ const Crud: FC<Props> = ({
       <Card shadow middle extended>
         <CardContent>
           {!data && <Loading />}
-          {data && <Table data={data} headers={headers} fileName={idFilter} />}
+          {data && (
+            <Table
+              data={data}
+              headers={headers}
+              fileName={idFilter}
+              action={action}
+            />
+          )}
         </CardContent>
       </Card>
     </>

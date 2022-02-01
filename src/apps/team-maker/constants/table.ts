@@ -22,6 +22,10 @@ const HEADERS = [
     name: "accountsna",
     header: "Cuentas NA",
     width: 150
+  },
+  {
+    name: "accountsna",
+    header: "Cuentas NA"
   }
 ];
 

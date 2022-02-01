@@ -5,6 +5,24 @@
       "username": "te",
       "password": "amo!",
       "active": true
+    },
+    {
+      "id": 2,
+      "username": "Retzu",
+      "password": "Retzu",
+      "active": true
+    },
+    {
+      "id": 3,
+      "username": "Kenobie",
+      "password": "Kenobie",
+      "active": true
+    },
+    {
+      "id": 4,
+      "username": "Photis",
+      "password": "Photis",
+      "active": true
     }
   ],
   "team": [
@@ -95,5 +113,67 @@
       "accountsna": "Loutar Jr"
     }
   ],
-  "matches": []
+  "scrims": [
+    {
+      "id": 1,
+      "games": [
+        {
+          "playerid": 1,
+          "champ": 1,
+          "damage": 3456,
+          "kills": 24,
+          "deaths": 34,
+          "assistants": 34,
+          "gold": 15437547,
+          "wards": 75,
+          "farm": 75,
+          "diffgold": 4758,
+          "diffwards": 47,
+          "difffarm": 75,
+          "times": [
+            {
+              "farm": 75,
+              "gold": 4758,
+              "difffarm": 75,
+              "diffgold": 4758,
+              "time": 10
+            },
+            {
+              "farm": 75,
+              "gold": 4758,
+              "difffarm": 75,
+              "diffgold": 4758,
+              "time": 20
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "soloqm": [
+    {
+      "id": 1,
+      "playerid": 1,
+      "champ": 1,
+      "damage": 3456,
+      "kills": 24,
+      "deaths": 34,
+      "assistants": 34,
+      "gold": 15437547,
+      "wards": 75,
+      "farm": 75,
+      "times": [
+        {
+          "farm": 75,
+          "gold": 4758,
+          "time": 10
+        },
+        {
+          "farm": 75,
+          "gold": 4758,
+          "time": 20
+        }
+      ]
+    }
+  ]
 }

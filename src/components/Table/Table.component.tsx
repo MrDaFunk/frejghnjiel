@@ -1,15 +1,22 @@
 import { FC } from "react";
 
+import Button from "../../components/Button";
 import TableHeader from "../../components/TableHeader";
 import TablePagination from "../../components/TablePagination";
 
 import { Rows } from "../../interfaces/table";
 
-import { Props, Col } from "./Table.interface";
+import { Props, Col, RenderCellParams } from "./Table.interface";
 import { PAGE_SIZE, ROWS_PER_PAGE } from "./Table.constants";
 import StyledTable from "./Table.styled";
 
-const Table: FC<Props> = ({ data, headers, fileName, selectable = false }) => {
+const Table: FC<Props> = ({
+  data,
+  headers,
+  fileName,
+  selectable = false,
+  action
+}) => {
   if (data.length === 0) {
     return null;
   }
@@ -32,6 +39,18 @@ const Table: FC<Props> = ({ data, headers, fileName, selectable = false }) => {
           }
     )
   ];
+  if (action) {
+    const { name, width, onClick } = action;
+    columns.push({
+      field: "actions",
+      headerName: "",
+      width,
+      renderCell: ({ id }: RenderCellParams) => (
+        <Button onClick={() => onClick(id as number)}>{name}</Button>
+      )
+    });
+  }
+
   const rows: Rows = data;
   return (
     <>
